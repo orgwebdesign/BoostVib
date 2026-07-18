@@ -2,10 +2,9 @@
 
 import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from "react";
 import { en } from "@/locales/en";
-import { fr } from "@/locales/fr";
 import { ar } from "@/locales/ar";
 
-type Language = "en" | "fr" | "ar";
+type Language = "en" | "ar";
 
 interface LanguageContextType {
   language: Language;
@@ -17,7 +16,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const dictionaries = {
   en,
-  fr,
   ar,
 };
 
@@ -26,7 +24,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem("language") as Language;
-    if (saved && ["en", "fr", "ar"].includes(saved)) {
+    if (saved && ["en", "ar"].includes(saved)) {
       setLanguageState(saved);
     }
   }, []);

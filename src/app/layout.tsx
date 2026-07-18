@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Noto_Sans_Arabic } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
@@ -13,6 +13,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
   variable: "--font-plus-jakarta",
+});
+
+const notoSansArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-noto-arabic",
 });
 
 export const metadata: Metadata = {
@@ -40,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="antialiased dark scroll-smooth">
-      <body className={`${inter.variable} ${plusJakartaSans.variable} min-h-screen bg-[var(--background)] text-[var(--text-main)] selection:bg-primary/30 selection:text-white flex flex-col`} suppressHydrationWarning>
+    <html lang="en" dir="ltr" className="antialiased dark scroll-smooth">
+      <body className={`${inter.variable} ${plusJakartaSans.variable} ${notoSansArabic.variable} min-h-screen bg-[var(--background)] text-[var(--text-main)] selection:bg-primary/30 selection:text-white flex flex-col`} suppressHydrationWarning>
         <LanguageProvider>
           {children}
         </LanguageProvider>

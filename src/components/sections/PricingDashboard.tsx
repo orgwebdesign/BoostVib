@@ -148,9 +148,7 @@ export function PricingDashboard({ pricingData: dynamicPricing }: PricingDashboa
   const currencyLabel = currency === "MAD" ? "MAD" : curCfg.symbol;
   const whatsappMessage = language === "en" 
     ? `Hello,\nI would like to place an order.\n\nPlatform: ${platformName}\nService: ${fullServiceName}\nQuantity: ${quantity}\nTotal Price: ${displayedPrice} ${currencyLabel}\nDelivery: ${deliverySpeed}\nGuarantee: ${guaranteeInfo}\n\nPlease assist me.`
-    : language === "fr"
-    ? `Bonjour,\nJe voudrais passer une commande.\n\nPlateforme: ${platformName}\nService: ${fullServiceName}\nQuantité: ${quantity}\nPrix Total: ${displayedPrice} ${currencyLabel}\nLivraison: ${deliverySpeed}\nGarantie: ${guaranteeInfo}\n\nMerci de m'aider.`
-    : `مرحباً،\nأود طلب الآتي:\n\nالمنصة: ${platformName}\nالخدمة: ${fullServiceName}\nالكمية: ${quantity}\nالسعر الإجمالي: ${displayedPrice} ${currencyLabel}\nالتوصيل: ${deliverySpeed}\nالضمان: ${guaranteeInfo}\n\nالرجاء المساعدة.`;
+    : `سلام،\nبغيت ندير طلب.\n\nالمنصة: ${platformName}\nالخدمة: ${fullServiceName}\nالكمية: ${quantity}\nالسعر الإجمالي: ${displayedPrice} ${currencyLabel}\nالتوصيل: ${deliverySpeed}\nالضمان: ${guaranteeInfo}\n\nعفاك ساعدني.`;
     
   const whatsappUrl = `https://wa.me/212656268002?text=${encodeURIComponent(whatsappMessage)}`;
 

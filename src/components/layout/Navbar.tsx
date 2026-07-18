@@ -59,8 +59,7 @@ export function Navbar() {
             </button>
             <div className="absolute top-[calc(100%-8px)] end-0 w-32 bg-surface-2 border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-1.5 flex flex-col gap-1">
               <button onClick={() => setLanguage("en")} className={cn("text-start px-3 py-2 text-sm rounded-lg transition-colors", language === "en" ? "text-white bg-white/10" : "text-text-soft hover:text-white hover:bg-white/5")}>English</button>
-              <button onClick={() => setLanguage("fr")} className={cn("text-start px-3 py-2 text-sm rounded-lg transition-colors", language === "fr" ? "text-white bg-white/10" : "text-text-soft hover:text-white hover:bg-white/5")}>Français</button>
-              <button onClick={() => setLanguage("ar")} className={cn("text-start px-3 py-2 text-sm rounded-lg transition-colors", language === "ar" ? "text-white bg-white/10" : "text-text-soft hover:text-white hover:bg-white/5")}>العربية</button>
+              <button onClick={() => setLanguage("ar")} className={cn("text-start px-3 py-2 text-sm rounded-lg transition-colors", language === "ar" ? "text-white bg-white/10" : "text-text-soft hover:text-white hover:bg-white/5")}>الدارجة</button>
             </div>
           </div>
 
@@ -96,7 +95,6 @@ export function Navbar() {
             <span className="text-sm text-text-muted flex items-center gap-2"><Globe size={16} /> {t("nav.language")}</span>
             <div className="flex gap-1">
               <button onClick={() => { setLanguage("en"); setMobileMenuOpen(false); }} className={cn("px-3 py-1.5 rounded-lg text-sm transition-colors", language === "en" ? "bg-white/10 text-white font-medium" : "text-text-soft hover:text-white hover:bg-white/5")}>EN</button>
-              <button onClick={() => { setLanguage("fr"); setMobileMenuOpen(false); }} className={cn("px-3 py-1.5 rounded-lg text-sm transition-colors", language === "fr" ? "bg-white/10 text-white font-medium" : "text-text-soft hover:text-white hover:bg-white/5")}>FR</button>
               <button onClick={() => { setLanguage("ar"); setMobileMenuOpen(false); }} className={cn("px-3 py-1.5 rounded-lg text-sm transition-colors", language === "ar" ? "bg-white/10 text-white font-medium" : "text-text-soft hover:text-white hover:bg-white/5")}>AR</button>
             </div>
           </div>
